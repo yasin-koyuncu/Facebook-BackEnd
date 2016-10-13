@@ -87,12 +87,5 @@ public class MessageDao {
 
     }
 
-    public static void main(String[] args) {
-        List <Messages> l=getAllMessage();
-
-       for(int i=0;i<l.size();i++)
-           System.out.println(""+l.get(i).getContent()+" "+l.get(i).getSubject());
-        //addMessage(new Messages("hallpj", "ska vi käka", UserDao.getUserById(1), UserDao.getUserById(2)));
-        //deleteMessage(20);
-    }
+  
 }

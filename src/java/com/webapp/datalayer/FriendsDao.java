@@ -136,13 +136,5 @@ public class FriendsDao {
     }
 
     
-    public static void main(String[] args){
-        addFriends(new Friends(UserDao.getUserById(1),UserDao.getUserById(2)));
-       Friends list=deleteUser(3,1);
-        
-     
-            System.out.println(list.getUserId().getId()+ " "+list.getFriendId().getId()   );
-        
- 
-    }
+  
 }

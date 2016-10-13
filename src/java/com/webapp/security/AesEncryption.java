@@ -44,22 +44,7 @@ public class AesEncryption {
 
     private static SecretKey secretKey;
 
-    public static void main(String []args) throws Exception {
-
-        salt = getSalt(); SecretKey tmp;
-
-        char[] message = "PasswordToEncrypt".toCharArray();
-        System.out.println("Message: " + String.valueOf(message));
-        
-        System.out.println("Encrypted: " + encrypt(message));
-        System.out.println("Decrypted: " + decrypt(encrypt(message).toCharArray()));
-        System.out.println("SecretKey ToString: " +secretKey.toString());
-        
-        
-        byte[] data=secretKey.getEncoded();
-        tmp=new SecretKeySpec(data,0,data.length,"AES");
-        System.out.println(tmp);
-    }
+ 
 
     public static String encrypt(char[] plaintext) throws Exception {   
         byte[] saltBytes = salt.getBytes();

@@ -49,8 +49,7 @@ public class PostDao {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("Serverlab1PU3");
         EntityManager em = emf.createEntityManager();
         Posts posts = new Posts();
-
-        
+      
         try {
             posts = em.find(Posts.class, id);
             
@@ -65,31 +64,11 @@ public class PostDao {
         }
         return posts;
     }
-     /*public static void deletePost(int id){
-        
-        Transaction trns = null;
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        try {
-            trns = session.beginTransaction();
-            Posts post = (Posts) session.load(Posts.class, new Integer(id));
-            session.delete(post);
-            session.getTransaction().commit();
-
-        } catch (RuntimeException e) {
-            if (trns != null) {
-                trns.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            session.flush();
-            session.close();
-        }
-    }*/
+   
     
       public static List<Posts> getAllPosts(){
           List<Posts> posts = new ArrayList<Posts>();
-        //Transaction trns = null;
-        //Session session = HibernateUtil.getSessionFactory().openSession();
+       
         EntityManagerFactory emf=Persistence.createEntityManagerFactory("Serverlab1PU3");
         EntityManager em=emf.createEntityManager();
         try {
@@ -106,11 +85,5 @@ public class PostDao {
       
     }
      
-     public static void main(String[] args){
-         List<Posts> list=getAllPosts();
-         
-         for(int i=0;i<list.size();i++){
-             System.out.println(list.get(i).getContent());
-         }
-     }
+    
 }

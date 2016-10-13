@@ -57,10 +57,5 @@ public class PostsHandler {
         return tmp;
     }
 
-    public static void main(String[] args) {
-        List<Posts> post=getPostByUserName("ykoyuncu@kth.se");
-        
-        //for(int i=0;i<post.size();i++)
-            //System.out.println(post.get(i).getContent());
-    }
+    
 }
